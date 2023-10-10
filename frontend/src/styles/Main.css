@@ -1,0 +1,60 @@
+.image {
+    height: 58rem;
+    width: 44%;
+
+}
+
+.main-container1{
+    width: 56%;
+    margin:15rem 0rem 0rem 0rem;
+    display: flex;
+    justify-content: center;
+}
+
+.main{
+    display: flex;
+    
+}
+
+.image img{
+    width: 100%;
+}
+
+.bttn-explore{
+    background-color: #fca501;
+    border: 0;
+    border-radius: 15px;
+    width: 6rem;
+    height: 2rem;
+    color: white;
+    font-weight: 600;
+
+}
+
+.bttn-add{
+    border-color: #fca501;
+    background-color: white;
+    border-radius: 15px;
+    width: 10rem;
+    height: 2rem;
+    color: #fca501;
+    font-weight: 600;
+    margin: 0rem 0rem 0rem 1rem;
+}
+
+.desc-header{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 3.2rem;
+
+}
+
+.description{
+    width: 27rem;
+    height: 13rem;
+    
+}
+
+.main-container2{
+    margin-top: 1rem;
+}
