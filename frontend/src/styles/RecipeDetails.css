@@ -1,0 +1,85 @@
+.rd-container{
+    display: flex;
+}
+
+.rd-img{
+    width: 50%;
+}
+
+.rd-img img{
+    width: 100%;
+    height: 100%;
+
+}
+
+.rd-name{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    margin: 4rem 7rem 0rem 3rem;
+    height: 8rem;
+    font-weight: 600;
+}
+
+.rd-container2{
+    width: 50%;
+}
+
+.rd-clock{
+    margin: 0rem 0rem 0rem 3rem;
+    display: flex;
+}
+
+.rd-duration{
+    margin-left: 1rem;
+}
+
+.rd-ingredients{
+    background-color: #faedca;
+    width: 100%;
+    height: 32rem;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.ingredient-list{
+    margin: 4rem 3rem 0rem 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-row-gap: 1.5rem;
+
+}
+.ingredient-list li{
+    width: 25rem;
+    height: 3rem;
+}
+
+.rdi-name{
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+    padding-top: 2rem;
+    font-weight: 600;
+
+}
+
+.rd-directions{
+    display: flex;
+    height: auto;
+    width: 100%;
+    align-items: center;
+}
+
+.rd-directions li{
+    list-style: none;
+    padding: 0;
+    margin: 0rem 4rem 0rem 4rem;
+    text-align: justify;
+}
+
+.rd-directions ul{
+    margin: 4rem 0rem 4rem 0rem;
+    display: grid;
+    grid-row-gap: 2rem;
+    padding: 0;
+}

@@ -1,0 +1,73 @@
+.re-name{
+    display: flex;
+    justify-content: center;
+    margin: 4rem 0rem 0rem 0rem;
+}
+
+#restaurantName-input{
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    width: 31rem;
+    font-size: 1.3rem;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    border-color: grey;
+    height: 2rem;
+
+}
+
+.re-container1{
+    display: grid;
+    margin: 5rem 0rem 2rem 17rem;
+    grid-row-gap: 1.8rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+
+}
+
+
+.re-container1 div{
+    display: grid;
+
+}
+
+.re-container1 input {
+   width: 27rem;
+   height: 1.8rem;
+   font-family: 'Montserrat', sans-serif;
+
+}
+
+.addrestaurant label {
+    margin-bottom: 0.5rem;
+}
+
+
+.re-button{
+    display: flex;
+    justify-content: center;
+    margin-top:9rem;
+}
+
+.re-button button{
+    color: white;
+    background-color: black;
+    width: 13rem;
+    height: 2rem;
+    border-radius: 5px;
+    border: 0;
+}
+
+.re-button button:hover{
+    background-color: gray;
+}
+
+.re-error{
+    display: flex;
+    margin-bottom: 9rem;
+    justify-content: center;
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}

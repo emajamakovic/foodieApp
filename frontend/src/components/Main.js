@@ -10,10 +10,10 @@ export default function Main() {
             <div className="main-container1">
                 <div className="description">
                 <div className="desc-header">Best food for your taste</div>
-                <div>Find somthing to write here</div>
+                <div className="desc-comment">Find recipe for everyones taste or explore the restaurants that fits you the best. All in one place.</div>
                 <div className="main-container2"> 
-                <button className="bttn-explore">EXPLORE</button> 
-                <Link to={`/addrecipe`}><button  className="bttn-add">ADD RECIPE</button></Link>
+                <Link to={'/explore'}><button className="bttn-explore">EXPLORE</button></Link> 
+                <Link to={'/addrecipe'}><button  className="bttn-add">ADD RECIPE</button></Link>
                 </div>
                 </div>
             </div>

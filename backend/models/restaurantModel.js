@@ -2,31 +2,39 @@ const mongoose = require('mongoose')
 
 const Schema = mongoose.Schema
 
-const recipeSchema = new Schema({
+const restaurantSchema = new Schema({
   name: {
     type: String,
     required: true
   },
-  ingredients: {
-    type: Array,
+  priceRange: {
+    type: String,
     required: true
   },
-  directions: {
-    type: String,
+  cuisines: {
+    type: Array,
     required: true
   },
   postedBy: {
     type: String,
     required: true
   },
-  duration: {
+  email: {
     type: String,
     required: true
   },
-   category: {
+   number: {
     type: String,
     required: true
   }, 
+  workingTime: {
+    type: String,
+    required: true
+  },
+   address: {
+    type: String,
+    required: true
+  },
   image: {
     data: Buffer,
     contentType: String,
@@ -34,4 +42,4 @@ const recipeSchema = new Schema({
   }
 }, { timestamps: true })
 
-module.exports = mongoose.model('Recipe', recipeSchema)
+module.exports = mongoose.model('Restaurant', restaurantSchema)

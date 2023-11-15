@@ -1,0 +1,53 @@
+.fq-quote{
+    display: flex;
+    width: 100%;
+    height: 27rem;
+}
+
+.fq-image{
+    width: 50%;
+}
+
+.fq-text{
+    width: 50%;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.fq-img-food{
+    display: flex;
+    width: 42rem;
+    height: 23rem;
+    border-radius: 61px;
+}
+
+.fq-img-chef img{
+    display: flex;
+    width: 42rem;
+    height: 23rem;
+    margin-right: 2rem;
+    border-radius: 61px;
+}
+.fq-img-chef{
+    display: flex;
+    position: absolute;
+    right: 0;
+}
+
+.fq-text-header{
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-top: 2rem;
+}
+
+.fq-text-quote{
+    margin-top: 2rem;
+    width: 35rem;
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+.food-quality-quotes{
+    margin-left: 2rem;
+}

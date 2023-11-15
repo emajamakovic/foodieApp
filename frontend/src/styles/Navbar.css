@@ -1,0 +1,50 @@
+.navbar{
+    
+    background-color: #fca501;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+
+}
+.objects a{
+    text-decoration: none;
+    color: black;
+    margin-right: 2rem;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 1rem;
+}
+
+.name{
+    font-family: 'Montserrat', sans-serif;
+    margin-left:5rem;
+    font-weight: 900;
+    letter-spacing: 3px;
+    text-decoration: none;
+    color: black;
+}
+
+
+
+.objects{
+    display: flex;
+    margin: 0rem 4rem 0rem 0rem;
+    align-items: center;
+
+}
+
+.logout {
+    background-color:#fca501;
+    border:0;
+    border-radius: 4rem;
+    width: 5rem;
+    height: 1.8rem;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 1rem;
+
+}
+
+.logout:hover{
+    background-color: white;
+}

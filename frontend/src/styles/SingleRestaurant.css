@@ -1,0 +1,48 @@
+.sr-img img{
+    width: 100%;
+    height: 100%;
+}
+
+.sr-img{
+    height: 14rem;
+    width: 20.5rem;
+}
+
+.singlerestaurant{
+    width: 100%;
+    transition: transform 0.3s;
+    
+}
+
+.sr-workingTime{
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    color: gray;
+    margin-top: 0.5rem;
+}
+
+.sr-name{
+    width: 17rem;
+    height: 2.7rem;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 0.5rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+
+}
+.sr-container {
+    display: flex;
+  }
+  
+ 
+  
+  .singlerestaurant:hover {
+    transform: scale(1.1); /* Adjust the scale factor as needed */
+  }
+  
+  .sr-container2{
+    display: none;
+  }
+  .sr-container2.visible{
+    display: block;
+  }

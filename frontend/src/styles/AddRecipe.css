@@ -1,0 +1,167 @@
+.r-name{
+    display: flex;
+    justify-content: center;
+    margin: 4rem 0rem 0rem 0rem;
+}
+
+#recipeName-input{
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    width: 31rem;
+    font-size: 1.3rem;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    border-color: grey;
+    height: 2rem;
+
+}
+
+.r-duration{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    margin: 0rem 1rem 0rem 0rem;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+#duration-input{
+    margin: 0rem 0rem 0rem 0.5rem;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0rem 0rem 0rem 0.5rem;
+    width: 4rem;
+    height: 1rem;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+
+}
+
+.container1{
+    display: flex;
+    margin: 8rem 0rem 0rem 0rem;
+}
+
+.r-directions{
+    display: grid;
+    justify-content: center;
+    margin-left: 2rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    margin-top: 4rem;
+}
+
+#directions-input{
+    border-radius: 5px;
+    border-color: gray;
+    height: 13.2rem;
+    width: 51rem;
+    resize: none;
+}
+
+
+.r-button{
+    display: flex;
+    justify-content: center;
+    margin-top:9rem;
+}
+
+.r-button button{
+    color: white;
+    background-color: black;
+    width: 13rem;
+    height: 2rem;
+    border-radius: 5px;
+    border: 0;
+}
+
+.r-button button:hover{
+    background-color: gray;
+}
+
+.r-ingredients{
+    display: grid;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    margin-left: 22.8rem;
+    margin-top: 5rem;
+    margin-right: 20.8rem;
+}
+
+
+
+.addrecipe label{
+    height: 2rem;
+}
+
+.r-ingredients div{
+    height: 2rem;
+}
+
+.r-ingredients ul{
+    height: 6rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    padding-left: 0;
+    margin-left: 1rem;
+}
+
+.r-ingredients li{
+   margin-bottom: 3px;
+   width: 14rem;
+}
+
+.r-image{
+    display: grid;
+    margin-left: 22.8rem;
+    margin-top: 2rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    
+}
+
+.r-image input{
+    font-family: 'Montserrat', sans-serif;
+}
+
+#ingredients-input{
+    font-family: 'Montserrat', sans-serif;
+    height: 1.5rem;
+    width: 17rem;
+    border-radius: 6px;
+    border: 1px solid #000;
+
+
+}
+
+.add-ingredient-button{
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 6px;
+    background-color: #faedca;
+    height: 1.7rem;
+    margin-left: 1rem;
+    border: 1px solid #000;
+
+
+}
+
+.container2{
+    display: flex;
+    justify-content: center;
+    margin-top:1rem ;
+}
+
+.r-select{
+    width: 10rem;
+}
+
+.r-error{
+    display: flex;
+    margin-bottom: 9rem;
+    justify-content: center;
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}

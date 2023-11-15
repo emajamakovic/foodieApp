@@ -1,0 +1,48 @@
+.l-header{
+    display: flex;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.login{
+    width: 37rem;
+    height: 20rem;
+    margin: 10rem 0rem 0rem 17rem;
+}
+
+.loginform{
+    display: flex;
+    background-image: url('../photos/Food-Login.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 41.5rem;
+}
+
+.l-info{
+    display: grid;
+    justify-content: center;
+    grid-row-gap: 1rem;
+}
+
+.l-input{
+    width: 19rem;
+    height: 1.5rem;
+    border: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.b-login{
+    width: 19rem;
+    height: 1.8rem;
+    border: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #fca501;
+    color: white;
+    border-radius: 5rem;
+    margin-top: 1rem;
+}
+
+.b-login:hover{
+    background-color: black;
+}

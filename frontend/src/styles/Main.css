@@ -1,18 +1,19 @@
 .image {
-    height: 58rem;
+    height: 100%;
     width: 44%;
 
 }
 
 .main-container1{
     width: 56%;
-    margin:15rem 0rem 0rem 0rem;
+    margin:17rem 0rem 0rem 0rem;
     display: flex;
     justify-content: center;
 }
 
 .main{
     display: flex;
+    height: 56.6rem;
     
 }
 
@@ -57,4 +58,9 @@
 
 .main-container2{
     margin-top: 1rem;
+}
+
+.desc-comment{
+    margin-top: 1rem;
+    margin-bottom: 2rem;
 }

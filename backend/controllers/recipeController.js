@@ -1,5 +1,17 @@
 const Recipe = require('../models/recipeModel')
 const mongoose = require('mongoose')
+const multer = require('multer')
+
+const Storage = multer.diskStorage({
+  destination: "../frontend/src/uploads",
+  filename: (req, file, cb) => {
+    cb(null, file.originalname);
+  },
+});
+
+const upload = multer({
+  storage: Storage
+}).single('image');
 
 // get all Recipes
 const getRecipes = async (req, res) => {
@@ -24,16 +36,29 @@ const getRecipe = async (req, res) => {
   res.status(200).json(recipe)
 }
 
-// create a new Recipe
+
 const createRecipe = async (req, res) => {
-  const {name, ingredients, directions, postedBy, duration} = req.body
-  
-  try {
-    const recipe = await Recipe.create({name, ingredients, directions, postedBy, duration})
-    res.status(200).json(recipe)
-  } catch (error) {
-    res.status(400).json({error: error.message})
-  }
+  upload(req, res, (err) => {
+    if (err) {
+      console.log(err)
+    } else {
+      const recipe = new Recipe({
+        name: req.body.name,
+        ingredients: req.body.ingredients,
+        directions: req.body.directions,
+        postedBy: req.body.postedBy,
+        duration: req.body.duration,
+        category: req.body.category,
+        image: {
+          data: req.file.filename,
+          contentType: 'image/png',
+          name: req.file.filename
+        }
+
+      })
+      recipe.save().then(() => res.send('uploaded'))
+    }
+  })
 }
 
 // delete a Recipe
