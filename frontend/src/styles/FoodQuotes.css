@@ -35,7 +35,7 @@
 }
 
 .fq-text-header{
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     text-transform: uppercase;
     font-weight: 600;
     margin-top: 2rem;
@@ -50,4 +50,26 @@
 
 .food-quality-quotes{
     margin-left: 2rem;
+    height: 62rem;
+    margin-bottom: 5rem;
+}
+
+.fq-column-name{
+    display: flex;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 5rem;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.fq-column-name::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 16rem;
+    height: 1px;
+    background-color: orange;
+    margin-top: 2.5rem;
 }

@@ -6,7 +6,10 @@ import '../styles/FoodQuotes.css';
 export default function FoodQuotes() {
     return (
         <div className="food-quality-quotes">
-           <div className="fq-quote">
+
+            <div className="fq-column-name">We offer a memorable foodie</div>
+
+            <div className="fq-quote">
             <div className="fq-image">
             <div><img className="fq-img-food" src={food}/></div>
             </div>

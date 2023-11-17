@@ -8,6 +8,7 @@ import Login from './pages/Login';
 import Explore from './pages/Explore';
 import RecipeDetails from './pages/RecipeDetails';
 import AddRestaurant from './pages/AddRestaurant';
+import Footer from './components/Footer';
 
 import {
   BrowserRouter as Router,
@@ -33,6 +34,7 @@ function App() {
 
 
       </Routes>
+      <Footer/>
     
     </div>
   );
