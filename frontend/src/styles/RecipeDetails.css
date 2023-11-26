@@ -1,5 +1,6 @@
 .rd-container{
     display: flex;
+    height: 32rem;
 }
 
 .rd-img{
@@ -15,8 +16,8 @@
 .rd-name{
     font-family: 'Montserrat', sans-serif;
     font-size: 2.5rem;
-    margin: 4rem 7rem 0rem 3rem;
-    height: 8rem;
+    margin: 6rem 7rem 0rem 3rem;
+    height: auto;
     font-weight: 600;
 }
 
@@ -25,8 +26,10 @@
 }
 
 .rd-clock{
-    margin: 0rem 0rem 0rem 3rem;
+    margin: 2rem 0rem 0rem 3rem;
     display: flex;
+    font-family: 'Montserrat', sans-serif;
+
 }
 
 .rd-duration{
@@ -82,4 +85,30 @@
     display: grid;
     grid-row-gap: 2rem;
     padding: 0;
+}
+
+
+.rd-category{
+    margin:0.5rem 0rem 0rem 3rem;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    color: gray;
+}
+
+.rd-postedBy{
+    margin:0.5rem 0rem 0rem 3rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+
+}
+
+.back-button{
+    margin: 1rem 0rem 0rem 3rem;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.back-button a{
+    display: flex;
+    align-items: center;
 }

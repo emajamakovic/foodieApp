@@ -15,6 +15,10 @@ export default function Main() {
                 <Link to={'/explore'}><button className="bttn-explore">EXPLORE</button></Link> 
                 <Link to={'/addrecipe'}><button  className="bttn-add">ADD RECIPE</button></Link>
                 </div>
+                <div className="main-container3">
+                <div className="main-or">or</div>
+                <Link to={'/addrestaurant'}><div className="bttn-addrestaurant">Add Restaurant</div></Link>
+                </div>
                 </div>
             </div>
            <div className="image">

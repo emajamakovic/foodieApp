@@ -33,7 +33,7 @@
     border-radius: 8px;
 }
 
-.b-signup{
+.s-signup{
     width: 19rem;
     height: 1.8rem;
     border: 0;
@@ -44,6 +44,19 @@
     margin-top: 1rem;
 }
 
-.b-signup:hover{
+.s-signup:hover{
     background-color: black;
+}
+
+.s-login-link{
+    justify-content: center;
+    display: flex;
+    font-size: 0.9rem;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.s-login-link a{
+    padding-left: 0.4rem;
+    font-weight: 600;
 }

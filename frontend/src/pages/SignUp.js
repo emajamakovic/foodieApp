@@ -49,7 +49,8 @@ export default function Signup() {
           />
         </div>
   
-        <button className="b-signup" disabled={isLoading}>Sign up</button>
+        <button className="s-signup" disabled={isLoading}>Sign up</button>
+        <div className="s-login-link">Already have an account? <a href="/login">Login</a></div>
         {error && <div className="error">{error}</div>}
         </div>
 

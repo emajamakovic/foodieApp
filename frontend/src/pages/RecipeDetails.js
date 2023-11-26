@@ -2,6 +2,8 @@ import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import '../styles/RecipeDetails.css';
 import { BsClock } from "react-icons/bs";
+import { IoCaretBack  } from "react-icons/io5";
+
 
 
 export default function RecipeDetails() {
@@ -30,18 +32,24 @@ export default function RecipeDetails() {
         <div className="recipedetails"> 
             <div className="rd-container">
             {recipe.image && (
-                <div className="rd-img"><img src={require(`../uploads/${recipe.image.name}`)} alt={recipe.name} /></div>
+                <div className="rd-img">
+                    <img src={require(`../uploads/${recipe.image.name}`)} alt={recipe.name} />
+
+                </div>
             )}
 
             {/* Image and name with duration of recipe */}
             <div className="rd-container2">
-            <div className="rd-name">{recipe.name}</div>
-                <div className="rd-clock">
-                    <BsClock size="1.5em"/>
-                    <div className="rd-duration">{recipe.duration}</div>
-                </div>
+                <div className="back-button"><a href="/explore"><IoCaretBack />Back</a></div> 
+                <div className="rd-name">{recipe.name}</div>
+                    <div className="rd-category">{recipe.category}</div>
+                    <div className="rd-clock">
+                        <BsClock size="1.5em"/>
+                        <div className="rd-duration">{recipe.duration}</div>
+                    </div>
+                <div className="rd-postedBy">Posted by: {recipe.postedBy}</div>
             </div>
-            </div> 
+            </div>
 
             <div className="rd-ingredients">
                 <div className="rdi-name">INGREDIENTS</div>

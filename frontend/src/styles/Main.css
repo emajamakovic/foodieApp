@@ -11,6 +11,11 @@
     justify-content: center;
 }
 
+.main-container3{
+    display: flex;
+    margin-top: 0.8rem;
+    font-family: 'Montserrat', sans-serif;
+}
 .main{
     display: flex;
     height: 56.6rem;
@@ -63,4 +68,23 @@
 .desc-comment{
     margin-top: 1rem;
     margin-bottom: 2rem;
+}
+
+.main-or{
+    text-transform: uppercase;
+    color: orange;
+    margin-left: 1rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+
+}
+
+.bttn-addrestaurant{
+    font-weight: 600;
+    margin-left: 5rem;
+    letter-spacing: 1.2px;
+}
+
+.bttn-addrestaurant:hover{
+    color: gray;
 }

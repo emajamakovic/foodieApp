@@ -38,6 +38,7 @@
   
   .singlerestaurant:hover {
     transform: scale(1.1); /* Adjust the scale factor as needed */
+    background-color: #cfe6dc;
   }
   
   .sr-container2{
@@ -45,4 +46,7 @@
   }
   .sr-container2.visible{
     display: block;
+    position: absolute;
+    background-color: #cfe6dc;
+    width: 100%;
   }

@@ -38,6 +38,7 @@ export default function Login() {
       </div>
 
       <button className="b-login" disabled={isLoading}>Log in</button>
+      <div className="b-signup-link">Don't have an account? <a href="/signup">Signup</a></div>
       {error && <div className="error">{error}</div>}
       </div>
 

@@ -46,3 +46,22 @@
 .b-login:hover{
     background-color: black;
 }
+
+.b-signup-link{
+    justify-content: center;
+    display: flex;
+    font-size: 0.9rem;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.b-signup-link a{
+    padding-left: 0.4rem;
+    font-weight: 600;
+}
+
+.error{
+    display: flex;
+    justify-content: center;
+    color: red;
+}

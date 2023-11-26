@@ -3,3 +3,35 @@ footer{
     background-color: black;
     color: white;
 }
+
+ .footer-list a{
+    color: white;
+}
+
+.f-sitename{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    letter-spacing: 3px;
+    text-decoration: none;
+    margin-bottom: 2.2rem;
+}
+
+.footer-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 1rem 5rem 0rem 16rem;
+    padding-top: 3rem;
+    font-family: 'Montserrat', sans-serif;
+
+
+}
+
+.footer-content li{
+    list-style: none;
+    padding-bottom: 1.3rem;
+    
+}
+
+.content2{
+    margin-top: 2rem;
+}
