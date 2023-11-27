@@ -1,6 +1,8 @@
 import React from "react";
 import '../styles/AddRestaurant.css';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
+
 
 export default function AddRestaurant() {
     const [restaurantName, setRestaurantName]=React.useState();
@@ -13,6 +15,17 @@ export default function AddRestaurant() {
     const [location, setLocation] = React.useState();
     const [image, setImage] = React.useState();
     const [error, setError]= React.useState(false);
+    const navigate = useNavigate();
+    var userData = localStorage.getItem('user');
+    var user = JSON.parse(userData);
+
+    React.useEffect(() => {
+      // Redirect to login page if user is null
+      if (!user) {
+        navigate('/login');
+      }
+    }, [user, navigate]);
+
 
 
     //const [latitude, setLatitude] = React.useState();
@@ -52,10 +65,6 @@ export default function AddRestaurant() {
     
       
 */
-
-    const userData = localStorage.getItem('user');
-    // Parse the JSON data
-    const user = JSON.parse(userData);
     
   const createRestaurant = async () => {
     const url = 'http://localhost:3000/restaurant/';

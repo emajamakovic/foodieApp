@@ -35,7 +35,7 @@
 }
 
 .logout {
-    background-color:#fca501;
+    background-color: white;
     border:0;
     border-radius: 4rem;
     width: 5rem;
@@ -46,5 +46,16 @@
 }
 
 .logout:hover{
-    background-color: white;
+    background-color: #cfe6dc;;
+}
+
+.username{
+    font-family: 'Nunito Sans', sans-serif;
+    margin-right: 2rem;
+}
+
+.nav-container1{
+    display: flex;
+    align-items: center;
+
 }

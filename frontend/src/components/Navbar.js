@@ -5,6 +5,10 @@ import { useLogout } from '../hooks/useLogout'
 
 export default function Navbar() {
   const { logout } = useLogout()
+  var userData = localStorage.getItem('user');
+  var user = JSON.parse(userData);
+
+
 
   const handleClick = () => {
     logout()
@@ -13,9 +17,15 @@ export default function Navbar() {
         <div className='navbar'>
           <Link to={'/'} className='name'><div>FOODIE</div>  </Link>
           <div className='objects'>
-          <Link to={'/login'}><div>Login</div></Link>
-          <Link to={'/signup'}><div>Signup</div></Link>
-          <button className='logout' onClick={handleClick}>Logout</button>
+            {user!=null  ? (
+            <div className='nav-container1'>
+            <div className='username'>{user.name}</div>
+            <button className='logout' onClick={handleClick}>Logout</button>
+            </div>) :
+            (<div className='nav-container1'>
+              <Link to={'/login'}><div>Login</div></Link>
+            <Link to={'/signup'}><div>Signup</div></Link>
+            </div>)}
           </div>
 
         </div>

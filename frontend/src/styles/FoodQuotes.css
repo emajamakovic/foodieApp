@@ -75,3 +75,17 @@
     background-color: orange;
     margin-top: 2.5rem;
 }
+
+
+.fq-readmore{
+    margin-top: 1rem;
+}
+
+.fq-readmore a{
+    color: orange;
+
+}
+
+.fq-readmore :hover{
+    color: grey;
+}

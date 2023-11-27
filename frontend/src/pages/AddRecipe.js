@@ -1,6 +1,7 @@
 import React from "react";
 import '../styles/AddRecipe.css'
 import Select from "react-select";
+import { useNavigate } from 'react-router-dom';
 
 
 export default function AddRecipe() {
@@ -12,6 +13,18 @@ export default function AddRecipe() {
   const [duration, setDuration]=React.useState();
   const [image, setImage]=React.useState();
   const [error, setError]= React.useState(false);
+  const navigate = useNavigate();
+  var userData = localStorage.getItem('user');
+  var user = JSON.parse(userData);
+  
+   
+
+    React.useEffect(() => {
+        // Redirect to login page if user is null
+        if (!user) {
+          navigate('/login');
+        }
+      }, [user, navigate]);
 
 
   const addIngredient = () => {
@@ -33,9 +46,6 @@ function handleSelect(data) {
   setSelectedCategory(data.value);
   console.log(selectedCategory)
 }
-  const userData = localStorage.getItem('user');
-    // Parse the JSON data
-  const user = JSON.parse(userData);
   
 
 

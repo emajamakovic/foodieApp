@@ -24,7 +24,7 @@ export const useLogin = () => {
     if (response.ok) {
       // save the user to local storage
       localStorage.setItem('user', JSON.stringify(json))
-      window.location.href='http://localhost:3001/';
+      window.location.href='/';
 
 
       // update the auth context
