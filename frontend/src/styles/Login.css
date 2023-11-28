@@ -25,6 +25,15 @@
     grid-row-gap: 1rem;
 }
 
+
+.l-info input{
+    width: 19rem;
+    height: 1.5rem;
+    border: 0;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 8px;
+}
+
 .l-input{
     width: 19rem;
     height: 1.5rem;
