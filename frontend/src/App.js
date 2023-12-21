@@ -9,6 +9,11 @@ import Explore from './pages/Explore';
 import RecipeDetails from './pages/RecipeDetails';
 import AddRestaurant from './pages/AddRestaurant';
 import Footer from './components/Footer';
+import Profile from './pages/Profile';
+import { useNavigate, useLocation } from 'react-router-dom';
+import EditRecipe from './pages/EditRecipe';
+import EditRestaurant from './pages/EditRestaurant';
+
 
 import {
   BrowserRouter as Router,
@@ -27,9 +32,16 @@ function App() {
         <Route path="/addrecipe" element={<AddRecipe />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/explore" element={<Explore />} />
+        <Route path="/explore/recipe" element={<Explore />} />
+        <Route path="/explore/restaurant" element={<Explore />} />
         <Route path="/explore/:id" element={<RecipeDetails />} />
         <Route path="/addrestaurant" element={<AddRestaurant/>} />
+        <Route path="/profile" element={<Profile/>} />
+        <Route path="/editrecipe" element={<EditRecipe/>} />
+        <Route path="/editrestaurant" element={<EditRestaurant/>} />
+
+
+
 
 
 

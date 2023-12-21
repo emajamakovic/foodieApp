@@ -36,6 +36,19 @@ const getRecipe = async (req, res) => {
   res.status(200).json(recipe)
 }
 
+// get a  Recipes by email
+const getUserPosts = async (req, res) => {
+  const { user } = req.params
+
+  const recipe = await Recipe.find({ postedBy : user})
+
+  if (!recipe) {
+    return res.status(404).json({error: 'No'})
+  }
+
+  res.status(200).json(recipe)
+}
+
 
 const createRecipe = async (req, res) => {
   upload(req, res, (err) => {
@@ -102,5 +115,6 @@ module.exports = {
   getRecipe,
   createRecipe,
   deleteRecipe,
-  updateRecipe
+  updateRecipe,
+  getUserPosts
 }

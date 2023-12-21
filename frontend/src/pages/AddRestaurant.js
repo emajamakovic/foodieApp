@@ -79,7 +79,7 @@ export default function AddRestaurant() {
     formData.append('name', restaurantName);
     formData.append('priceRange', priceRange);
     formData.append('cuisines', cuisines);
-    formData.append('postedBy', user.name);
+    formData.append('postedBy', user.email);
     formData.append('email', email);
     formData.append('number', number);
     formData.append('workingTime', workingTime);

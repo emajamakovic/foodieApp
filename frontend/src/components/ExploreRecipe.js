@@ -33,7 +33,15 @@ export default function ExploreRecipe() {
     })
     return (
         <div className="explorerecipe">
+            <div className="buttons">
+            <button>Breakfast</button>
+            <button>Lunch</button>
+            <button>Dinner</button>
+            <button>Dessert</button>
+            </div>
+        <div className="recipelisting">
             {recipes}
+        </div>
         </div>
     )
 }

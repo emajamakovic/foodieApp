@@ -6,12 +6,13 @@ import TabPanel from '@mui/lab/TabPanel';
 import ExploreRecipe from "../components/ExploreRecipe";
 import ExploreReview from "../components/ExploreReview";
 import '../styles/Explore.css';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 
 export default function Explore() {
     const [tabvalue, setTabValue]=React.useState('0');
     const navigate = useNavigate();
+    const location = useLocation();
     var userData = localStorage.getItem('user');
     var user = JSON.parse(userData);
    
@@ -26,7 +27,20 @@ export default function Explore() {
 
     const handleChange = (event, newValue) => {
         setTabValue(newValue);
+
+        if (newValue === '0') {
+            navigate('/explore/recipe');
+        } else if (newValue === '1') {
+            navigate('/explore/restaurant');
+        }
       };
+
+      React.useEffect(() => {
+        // Check the current URL and update the tab value accordingly
+        if (location.pathname.toLowerCase().includes('/explore/restaurant')) {
+          setTabValue('1');
+        }
+      }, [location.pathname]);
 
     return (
         <div>

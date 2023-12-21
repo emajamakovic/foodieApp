@@ -12,6 +12,8 @@ export default function RecipeDetails() {
     const { id } = useParams();
     const [ingredientsString, setIngredients]= React.useState('');
     const directions=recipe.directions;
+    const [user, setUser]=React.useState();
+    const [userEmail, setUserEmail]=React.useState();
 
     useEffect(() => {
         const fetchRecipe = async () => {
@@ -21,12 +23,27 @@ export default function RecipeDetails() {
             if (response.ok) {
                 setRecipe(data)
                 setIngredients(data.ingredients)
+                setUserEmail(data.postedBy)
             }
-        }
+        };
         fetchRecipe();
 
+        
+        if (userEmail) {
+            fetchUser();
+        }
+    }, [ userEmail]);
 
-    }, []);
+        const fetchUser = async () => {
+            const response = await fetch(`http://localhost:3000/user/byemail/${userEmail}`)
+            const data = await response.json()
+
+            if (response.ok) {
+                setUser(data)
+                console.log(data)
+            }
+        };
+
 
     return (
         <div className="recipedetails"> 
@@ -40,14 +57,14 @@ export default function RecipeDetails() {
 
             {/* Image and name with duration of recipe */}
             <div className="rd-container2">
-                <div className="back-button"><a href="/explore"><IoCaretBack />Back</a></div> 
+                <div className="back-button"><a href="/explore/recipe"><IoCaretBack />Back</a></div> 
                 <div className="rd-name">{recipe.name}</div>
                     <div className="rd-category">{recipe.category}</div>
                     <div className="rd-clock">
                         <BsClock size="1.5em"/>
                         <div className="rd-duration">{recipe.duration}</div>
                     </div>
-                <div className="rd-postedBy">Posted by: {recipe.postedBy}</div>
+               {user && <div className="rd-postedBy">Posted by: {user.name}</div>}
             </div>
             </div>
 

@@ -17,16 +17,17 @@ export default function Footer(){
 
               <div className="content2">
               <ul className="footer-list">
-                  <li><a href="/explore">Explore</a></li>
-                  <li><a href="/addrestaurant">Add Restaurant</a></li>
+                  <li><a href="/explore/recipe">Explore Recipes</a></li>
                   <li><a href="/addrecipe">Add Recipe</a></li>
-                  <li><a href="/">Home</a></li>
+                  <li><a href="/explore/restaurant">Explore Restaurants</a></li>
+                  <li><a href="/addrestaurant">Add Restaurant</a></li>
 
                 </ul>
               </div>
 
               <div className="content2">
               <ul className="footer-list">
+                   <li><a href="/">Home</a></li>
                   <li><a href="/login">Login</a></li>
                   <li><a href="/signup">Signup</a></li>
 

@@ -63,7 +63,7 @@ function handleSelect(data) {
     formData.append('ingredients', ingredients);
     formData.append('directions', directions);
     formData.append('duration', duration);
-    formData.append('postedBy', user.name);
+    formData.append('postedBy', user.email);
     formData.append('image', image);
     formData.append('category', selectedCategory);
 

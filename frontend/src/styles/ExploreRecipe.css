@@ -1,7 +1,21 @@
-.explorerecipe{
+.recipelisting{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    margin:3rem 0rem 0rem 0rem;
+    margin:2rem 0rem 0rem 0rem;
     grid-column-gap: 3rem;
     grid-row-gap: 5rem;
+}
+
+.buttons button{
+    border: 0;
+    margin-right: 2rem;
+    width: 5rem;
+    height: 2rem;
+    
+}
+
+.buttons{
+    display: flex;
+    margin-top: 2rem;
+    justify-content: center;
 }

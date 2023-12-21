@@ -4,7 +4,8 @@ const {
     getRecipe,
     createRecipe,
     deleteRecipe,
-    updateRecipe
+    updateRecipe,
+    getUserPosts
 } = require('../controllers/recipeController')
 
 const router = express.Router()
@@ -15,6 +16,9 @@ router.get('/', getRecipes)
 
 // GET a single Recipe by id
 router.get('/:id', getRecipe) 
+
+//Get
+router.get('/user/:user', getUserPosts)
 
 // POST a new Recipe
 router.post('/', createRecipe)

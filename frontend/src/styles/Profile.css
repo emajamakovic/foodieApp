@@ -1,0 +1,31 @@
+.profile{
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.user-info img{
+    height: 13rem;
+    width: 13rem;
+}
+
+.user-info-container{
+    display: flex;
+    justify-content: center;
+}
+
+.p-username,
+.p-email{
+    display: flex;
+    justify-content: center;
+    font-weight: 600;
+}
+
+.p-username{
+    font-size: 1.3rem;
+
+}
+
+.p-email{
+    font-weight: 100;
+    margin-top: 0.5rem;
+}

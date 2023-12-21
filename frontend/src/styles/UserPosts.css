@@ -1,0 +1,83 @@
+.userrecipe{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin: 2rem 5rem 0rem 5rem;
+    grid-column-gap: 3rem;
+    grid-row-gap: 5rem;
+    height: 21rem;
+}
+
+.up-recipe, 
+.up-restaurants {
+    margin-top: 4rem;
+    font-size: 1.3rem;
+    margin-left: 10rem;
+}
+
+.userrestaurants{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin: 2rem 5rem 6rem 5rem;
+    grid-column-gap: 3rem;
+}
+
+.singlerestaurant{
+    width: 19rem;
+}
+
+.sres-img{
+    width: 100%;
+}
+
+.sr-edit,
+.sur-edit {
+    display: flex;
+    margin-top: 1rem;
+}
+
+.sr-edit button, 
+.sur-edit button{
+    height: 1.5rem;
+    border-radius: 6px;
+    border: 1px solid;
+    font-family: 'Montserrat', sans-serif;
+
+
+}
+
+.sr-editrecipe,
+.sur-editrestaurant{
+    margin-right: 1rem;
+    width: 50%;
+}
+
+
+
+
+.sr-editrecipe button,
+.sur-editrestaurant button{
+    width: 100%;
+    background-color: #cfe6dc;
+
+
+}
+
+.sr-deleterecipe, 
+.sur-deleterestaurant{
+    width: 50%;
+
+}
+
+.modal-header{
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: center;
+}
+
+.singleuserrestaurant:hover {
+    transform: none; /* Adjust the scale factor as needed */
+  }
+
+  .r-ingredients ul{
+    height: auto;
+  }

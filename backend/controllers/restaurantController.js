@@ -20,6 +20,37 @@ const getRestaurants = async (req, res) => {
   res.status(200).json(restaurants)
 }
 
+// get a single Restaurant by id 
+const getRestaurant = async (req, res) => {
+  const { id } = req.params
+
+  if (!mongoose.Types.ObjectId.isValid(id)) {
+    return res.status(404).json({error: 'No such Restaurant'})
+  }
+
+  const restaurant = await Restaurant.findById(id)
+
+  if (!restaurant) {
+    return res.status(404).json({error: 'No such Restaurant'})
+  }
+
+  res.status(200).json(restaurant)
+}
+
+
+// get a restaurants by email
+const getUserRestaurants = async (req, res) => {
+  const { user } = req.params
+
+  const restaurant = await Restaurant.find({ postedBy : user})
+
+  if (!restaurant) {
+    return res.status(404).json({error: 'No'})
+  }
+
+  res.status(200).json(restaurant)
+}
+
 //create a restaurant
 
 const createRestaurant = async (req, res) => {
@@ -88,5 +119,7 @@ module.exports = {
   getRestaurants,
   createRestaurant,
   deleteRestaurant,
-  updateRestaurant
+  updateRestaurant,
+  getUserRestaurants,
+  getRestaurant
 }
