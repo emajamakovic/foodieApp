@@ -62,6 +62,7 @@ const createRecipe = async (req, res) => {
         postedBy: req.body.postedBy,
         duration: req.body.duration,
         category: req.body.category,
+        likes:req.body.likes,
         image: {
           data: req.file.filename,
           contentType: 'image/png',

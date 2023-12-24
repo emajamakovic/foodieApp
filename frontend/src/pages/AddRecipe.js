@@ -16,6 +16,7 @@ export default function AddRecipe() {
   const navigate = useNavigate();
   var userData = localStorage.getItem('user');
   var user = JSON.parse(userData);
+  const numerOfLikes=0;
   
    
 
@@ -66,6 +67,7 @@ function handleSelect(data) {
     formData.append('postedBy', user.email);
     formData.append('image', image);
     formData.append('category', selectedCategory);
+    formData.append('likes', numerOfLikes);
 
   
     try {

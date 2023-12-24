@@ -67,6 +67,7 @@ const createRestaurant = async (req, res) => {
         number: req.body.number,
         workingTime: req.body.workingTime,
         address: req.body.address,
+        likes:req.body.likes,
         image: {
           data: req.file.filename,
           contentType: 'image/png',

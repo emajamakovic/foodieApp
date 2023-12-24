@@ -15,6 +15,7 @@ export default function AddRestaurant() {
     const [location, setLocation] = React.useState();
     const [image, setImage] = React.useState();
     const [error, setError]= React.useState(false);
+    const numberOfLikes=0;
     const navigate = useNavigate();
     var userData = localStorage.getItem('user');
     var user = JSON.parse(userData);
@@ -85,6 +86,8 @@ export default function AddRestaurant() {
     formData.append('workingTime', workingTime);
     formData.append('address', address);
     formData.append('image', image);
+    formData.append('likes', numberOfLikes);
+
 
 
   

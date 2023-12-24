@@ -25,7 +25,6 @@
     width: 17rem;
     height: 2.7rem;
     font-family: 'Montserrat', sans-serif;
-    margin-top: 0.5rem;
     font-weight: 600;
     font-size: 1.1rem;
 
@@ -52,5 +51,21 @@
     position: absolute;
     background-color: #cfe6dc;
     width: 19rem;
+    height: 5.5rem;
+  }
 
+  .sres-container3{
+    display: flex;
+    margin-top: 0.5rem;
+
+  }
+
+  .sres-likes{
+    display: flex;
+
+  }
+
+  .heart-icon{
+    margin: 0.2rem;
+    display: flex;
   }

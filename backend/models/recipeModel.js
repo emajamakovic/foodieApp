@@ -27,6 +27,10 @@ const recipeSchema = new Schema({
     type: String,
     required: true
   }, 
+  likes: {
+    type: Number,
+    required: true
+  }, 
   image: {
     data: Buffer,
     contentType: String,
