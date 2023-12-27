@@ -19,3 +19,15 @@
     margin-top: 2rem;
     justify-content: center;
 }
+
+.searchfunctionality{
+    display: flex;
+    justify-content: center;
+}
+
+.searchfunctionality input {
+    border-radius: 6px;
+    border: 1px solid lightgray;
+    width: 17rem;
+    height: 1.7rem;
+}

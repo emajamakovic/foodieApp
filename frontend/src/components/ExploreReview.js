@@ -4,6 +4,8 @@ import '../styles/ExploreRestaurant.css';
 
 export default function ExploreReview() {
     const [allRestaurants, setAllRestaurants] = React.useState([]);
+    const [visibleRestaurants, setVisibleRestaurants] = React.useState([]);
+    const [input, setInput] = React.useState("");
 
 
     useEffect(() => {
@@ -14,6 +16,7 @@ export default function ExploreReview() {
 
             if (response.ok) {
                 setAllRestaurants(data)
+                setVisibleRestaurants(data)
             }
         }
 
@@ -22,8 +25,34 @@ export default function ExploreReview() {
 
     }, [])
 
+    const fetchData = (value) => {
+        fetch("http://localhost:3000/restaurant/")
+          .then((response) => response.json())
+          .then((json) => {
+            const results = json.filter((restaurant) => {
+              return (
+                value &&
+                restaurant &&
+                restaurant.name &&
+                restaurant.name.toLowerCase().includes(value)
+              );
+            });
+            setVisibleRestaurants(results);
+          });
+      };
 
-    const restaurants = allRestaurants.map(restaurant => {
+    const handleChange = (value) => {
+        setInput(value);
+        if (value === "") {
+            setVisibleRestaurants(allRestaurants);
+        } else {
+            fetchData(value);
+        }
+        
+      };
+
+
+    const restaurants = visibleRestaurants.map(restaurant => {
         return (
             <SingleRestaurant
                 key={restaurant.id}
@@ -32,8 +61,18 @@ export default function ExploreReview() {
         )
     })
     return (
+        <div>
+            <div className="searchfunctionality">
+            <input
+            placeholder="Type to search..."
+            value={input}
+            onChange={(e) => handleChange(e.target.value) }
+        
+      />
+      </div>
         <div className="explorerestaurant">
             {restaurants}
+        </div>
         </div>
     )
 }
