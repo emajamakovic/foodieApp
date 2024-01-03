@@ -2,6 +2,8 @@ import React from 'react';
 import '../styles/Navbar.css'
 import { Link } from 'react-router-dom';
 import { useLogout } from '../hooks/useLogout'
+import { CgProfile } from "react-icons/cg";
+
 
 export default function Navbar() {
   const { logout } = useLogout()
@@ -21,6 +23,7 @@ export default function Navbar() {
             <div className='nav-container1'>
             <div className='username'>{user.name}</div>
             <button className='logout' onClick={handleClick}>Logout</button>
+            <Link to={'/profile'}><CgProfile className='profileicon'/></Link>
             </div>) :
             (<div className='nav-container1'>
               <Link to={'/login'}><div>Login</div></Link>

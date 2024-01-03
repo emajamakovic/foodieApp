@@ -2,6 +2,7 @@ const express = require('express')
 const {
     getRecipes,
     getRecipe,
+    getByLikes,
     createRecipe,
     deleteRecipe,
     updateRecipe,
@@ -13,6 +14,8 @@ const router = express.Router()
 // GET all Recipes
 router.get('/', getRecipes) 
 
+//most likes
+router.get('/likes/', getByLikes)
 
 // GET a single Recipe by id
 router.get('/:id', getRecipe) 

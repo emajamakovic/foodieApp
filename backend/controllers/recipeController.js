@@ -19,6 +19,7 @@ const getRecipes = async (req, res) => {
 
   res.status(200).json(recipes)
 }
+
 // get a single Recipe by id 
 const getRecipe = async (req, res) => {
   const { id } = req.params
@@ -35,6 +36,20 @@ const getRecipe = async (req, res) => {
 
   res.status(200).json(recipe)
 }
+
+const getByLikes = async (req, res) => {
+  try {
+    console.log('Request received for /recipe/likes/');
+
+    const recipes = await Recipe.find({}).sort({ likes: -1 }).limit(1);
+
+    res.status(200).json(recipes);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
+};
+
 
 // get a  Recipes by email
 const getUserPosts = async (req, res) => {
@@ -114,6 +129,7 @@ const updateRecipe = async (req, res) => {
 module.exports = {
   getRecipes,
   getRecipe,
+  getByLikes,
   createRecipe,
   deleteRecipe,
   updateRecipe,

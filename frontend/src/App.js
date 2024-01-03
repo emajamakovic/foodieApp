@@ -13,6 +13,7 @@ import Profile from './pages/Profile';
 import { useNavigate, useLocation } from 'react-router-dom';
 import EditRecipe from './pages/EditRecipe';
 import EditRestaurant from './pages/EditRestaurant';
+import GoToTop from './components/GoToTop';
 
 
 import {
@@ -40,12 +41,8 @@ function App() {
         <Route path="/editrecipe" element={<EditRecipe/>} />
         <Route path="/editrestaurant" element={<EditRestaurant/>} />
 
-
-
-
-
-
       </Routes>
+      <GoToTop/>
       <Footer/>
     
     </div>

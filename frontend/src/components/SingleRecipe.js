@@ -2,12 +2,17 @@ import React from "react";
 import '../styles/SingleRecipe.css';
 import { Link } from 'react-router-dom';
 import {  GoHeartFill } from "react-icons/go";
+import { useNavigate } from "react-router-dom";
+
 
 
 
 export default function SingleRecipe(props) {
     const [isLiked, setIsLiked] = React.useState(false);
     const [likeCount, setLikeCount] = React.useState(props.likes);
+  const navigate = useNavigate();
+  var userData = localStorage.getItem('user');
+  var user = JSON.parse(userData);
 
     React.useEffect(() => {
         // Simulating an asynchronous update to the server
@@ -42,6 +47,9 @@ export default function SingleRecipe(props) {
 
 
     const handleLikeToggle = () => {
+      if (!user) {
+        navigate('/login');
+      }
         setLikeCount((prevLikes) => (isLiked ? prevLikes - 1 : prevLikes + 1));
         setIsLiked((prevIsLiked) => !prevIsLiked);
       };

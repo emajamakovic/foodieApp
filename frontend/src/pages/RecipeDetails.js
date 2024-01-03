@@ -3,6 +3,8 @@ import { useParams } from "react-router-dom";
 import '../styles/RecipeDetails.css';
 import { BsClock } from "react-icons/bs";
 import { IoCaretBack  } from "react-icons/io5";
+import { useNavigate, useLocation } from 'react-router-dom';
+
 
 
 
@@ -14,6 +16,20 @@ export default function RecipeDetails() {
     const directions=recipe.directions;
     const [user, setUser]=React.useState();
     const [userEmail, setUserEmail]=React.useState();
+
+    const navigate = useNavigate();
+    const location = useLocation();
+    var userData = localStorage.getItem('user');
+    var userStorage = JSON.parse(userData);
+
+
+    React.useEffect(() => {
+        // Redirect to login page if user is null
+        if (!userStorage) {
+          navigate('/login');
+        }
+      }, [userStorage, navigate]);
+
 
     useEffect(() => {
         const fetchRecipe = async () => {
