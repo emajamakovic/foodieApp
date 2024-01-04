@@ -68,7 +68,7 @@ export default function AddRestaurant() {
 */
     
   const createRestaurant = async () => {
-    const url = 'http://localhost:3000/restaurant/';
+    const url = 'https://foodie-app-uz37.onrender.com/restaurant/';
 
     if (!restaurantName || !priceRange || !cuisines || !email || !number || !workingTime || !address || !image) {
       setError(true);

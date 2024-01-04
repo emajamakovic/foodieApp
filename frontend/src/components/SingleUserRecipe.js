@@ -24,7 +24,7 @@ export default function SingleRecipe(props) {
 
     const handleDelete = async () => {
         try {
-          const response = await fetch(`http://localhost:3000/recipe/${props._id}`, {
+          const response = await fetch(`https://foodie-app-uz37.onrender.com/recipe/${props._id}`, {
             method: 'DELETE', // Make sure to set the method to 'DELETE'
           });
       

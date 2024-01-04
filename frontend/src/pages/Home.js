@@ -12,7 +12,7 @@ export default function Home() {
     React.useEffect(() => {
 
         const fetchRecipes = async () => {
-            const response = await fetch('http://localhost:3000/recipe/')
+            const response = await fetch('https://foodie-app-uz37.onrender.com/recipe/')
             const data = await response.json()
 
             if (response.ok) {

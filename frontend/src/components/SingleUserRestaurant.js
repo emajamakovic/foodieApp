@@ -18,7 +18,7 @@ export default function SingleUserRestaurant(props) {
 
     const handleDelete = async () => {
         try {
-          const response = await fetch(`http://localhost:3000/restaurant/${props._id}`, {
+          const response = await fetch(`https://foodie-app-uz37.onrender.com/restaurant/${props._id}`, {
             method: 'DELETE', // Make sure to set the method to 'DELETE'
           });
       

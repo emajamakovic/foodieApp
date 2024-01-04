@@ -11,7 +11,7 @@ export default function ExploreReview() {
     useEffect(() => {
 
         const fetchRestaurants = async () => {
-            const response = await fetch('http://localhost:3000/restaurant/')
+            const response = await fetch('https://foodie-app-uz37.onrender.com/restaurant/')
             const data = await response.json()
 
             if (response.ok) {
@@ -26,7 +26,7 @@ export default function ExploreReview() {
     }, [])
 
     const fetchData = (value) => {
-        fetch("http://localhost:3000/restaurant/")
+        fetch("https://foodie-app-uz37.onrender.com/restaurant/")
           .then((response) => response.json())
           .then((json) => {
             const results = json.filter((restaurant) => {

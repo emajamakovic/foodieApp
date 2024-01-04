@@ -57,7 +57,7 @@ function handleSelect(data) {
       return false;
     }
 
-    const url = 'http://localhost:3000/recipe/';
+    const url = 'https://foodie-app-uz37.onrender.com/recipe/';
   
     const formData = new FormData();
     formData.append('name', recipeName);

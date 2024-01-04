@@ -22,7 +22,7 @@ export default function EditRecipe() {
 
     React.useEffect(() => {
         const fetchRecipe = async () => {
-            const response = await fetch(`http://localhost:3000/recipe/${recipeId}`)
+            const response = await fetch(`https://foodie-app-uz37.onrender.com/recipe/${recipeId}`)
             const data = await response.json()
     
             if (response.ok) {

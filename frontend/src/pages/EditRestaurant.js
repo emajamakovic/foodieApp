@@ -61,7 +61,7 @@ export default function EditRestaurant() {
     
 React.useEffect(() => {
     const fetchRestaurant = async () => {
-        const response = await fetch(`http://localhost:3000/restaurant/${restaurantId}`)
+        const response = await fetch(`https://foodie-app-uz37.onrender.com/restaurant/${restaurantId}`)
         const data = await response.json()
 
         if (response.ok) {

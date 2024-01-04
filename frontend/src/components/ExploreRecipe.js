@@ -12,7 +12,7 @@ export default function ExploreRecipe() {
     React.useEffect(() => {
 
         const fetchRecipes = async () => {
-            const response = await fetch('http://localhost:3000/recipe/')
+            const response = await fetch('https://foodie-app-uz37.onrender.com/recipe/')
             const data = await response.json()
 
             if (response.ok) {
@@ -27,7 +27,7 @@ export default function ExploreRecipe() {
     }, [])
 
     const fetchData = (value) => {
-        fetch("http://localhost:3000/recipe/")
+        fetch("https://foodie-app-uz37.onrender.com/recipe/")
           .then((response) => response.json())
           .then((json) => {
             const results = json.filter((recipe) => {

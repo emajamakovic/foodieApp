@@ -15,7 +15,7 @@ export default function UserPosts() {
     useEffect(() => {
 
         const fetchRecipes = async () => {
-            const response = await fetch(`http://localhost:3000/recipe/user/${user.email}`)
+            const response = await fetch(`https://foodie-app-uz37.onrender.com/recipe/user/${user.email}`)
             const data = await response.json()
 
             if (response.ok) {
@@ -24,7 +24,7 @@ export default function UserPosts() {
         }
 
         const fetchRestaurants = async () => {
-            const response = await fetch(`http://localhost:3000/restaurant/user/${user.email}`)
+            const response = await fetch(`https://foodie-app-uz37.onrender.com/restaurant/user/${user.email}`)
             const data = await response.json()
 
             if (response.ok) {

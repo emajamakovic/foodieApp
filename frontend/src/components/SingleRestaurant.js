@@ -15,7 +15,7 @@ export default function SingleRestaurant(props) {
         const updateLikesOnServer = async () => {
           try {
             // Assuming you have an API endpoint to update likes
-            const response = await fetch(`http://localhost:3000/restaurant/${props._id}`, {
+            const response = await fetch(`https://foodie-app-uz37.onrender.com/restaurant/${props._id}`, {
               method: 'PATCH',
               headers: {
                 'Content-Type': 'application/json',

@@ -8,7 +8,7 @@ export default function FavouriteRecipe() {
     React.useEffect(() => {
 
         const fetchRecipe = async () => {
-            const response = await fetch('http://localhost:3000/recipe/likes/')
+            const response = await fetch('https://foodie-app-uz37.onrender.com/recipe/likes/')
             const data = await response.json()
 
             if (response.ok) {

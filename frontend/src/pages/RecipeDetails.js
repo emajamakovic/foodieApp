@@ -33,7 +33,7 @@ export default function RecipeDetails() {
 
     useEffect(() => {
         const fetchRecipe = async () => {
-            const response = await fetch(`http://localhost:3000/recipe/${id}`)
+            const response = await fetch(`https://foodie-app-uz37.onrender.com/recipe/${id}`)
             const data = await response.json()
 
             if (response.ok) {
