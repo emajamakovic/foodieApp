@@ -79,14 +79,14 @@ function handleSelect(data) {
       if (response.ok) {
         const recipe = await response.json();
         console.log('Recipe created:', recipe);
-        window.location.href='http://localhost:3001/explore/recipe';
+        window.location.replace('/explore/recipe');
       } else {
         const error = await response.json();
         console.error('Failed to create recipe:', error);
       }
     } catch (error) {
       console.error('Failed to create recipe:', error);
-      window.location.href='http://localhost:3001/explore/recipe';
+      window.location.replace('/explore/recipe');
 
     }
   };

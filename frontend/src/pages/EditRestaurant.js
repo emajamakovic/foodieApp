@@ -80,7 +80,7 @@ React.useEffect(() => {
 
   const handleUpdate = async () => {
     try {
-      const response = await fetch(`http://localhost:3000/restaurant/${restaurantId}`, {
+      const response = await fetch(`https://foodie-app-uz37.onrender.com/restaurant/${restaurantId}`, {
         method: 'PATCH', // or 'PATCH' depending on your API
         headers: {
           'Content-Type': 'application/json',

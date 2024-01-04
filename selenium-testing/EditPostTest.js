@@ -18,16 +18,22 @@ async function runTest() {
         await driver.findElement(By.className('b-login')).click();
         ///////////////////////////////////////////////////////////
 
+        await driver.wait(until.elementLocated(By.id('profile-page-link')), 5000).click();
+
+        await driver.wait(until.elementLocated(By.xpath('/html/body/div/div/div[2]/div[2]/div[2]/div[2]/div/a')), 5000).click();
+
+        const Recipename = await driver.wait(until.elementLocated(By.id('recipeName-input')),5000);
+        await Recipename.sendKeys('Fluffernutter Brownie');
+
+        await driver.findElement(By.xpath('/html/body/div/div/div[2]/div/div[5]/button')).click();
+
         await driver.wait(until.elementLocated(By.xpath('//*[@id="root"]/div/div[2]/div[1]/div[1]/div/div[3]/a[1]')), 5000).click();
 
 
-        await driver.wait(until.elementLocated(By.xpath('/html/body/div/div/div[2]/div[2]/div[1]/div/div[2]/div[2]/a')), 5000).click();
+        let name = await driver.wait(until.elementLocated(By.xpath('/html/body/div/div/div[2]/div[2]/div[1]/div/div[2]/div[2]/a')), 10000);
+        let text = await name.getText();
 
-
-        let element = await driver.wait(until.elementLocated(By.css('#root > div > div.recipedetails > div.rd-ingredients > div')), 10000);
-        let text = await element.getText();
-
-        if (text === 'INGREDIENTS') {
+        if (text === 'Fluffernutter Brownie') {
             console.log('Text matches.Test passed!');
         } else {
             console.log(`Text is "${text}". Test failed.`);

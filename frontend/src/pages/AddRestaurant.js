@@ -100,14 +100,14 @@ export default function AddRestaurant() {
       if (response.ok) {
         const restaurant = await response.json();
         console.log('Restaurant created:', restaurant);
-        window.location.href='http://localhost:3001/explore/restaurant';
+        window.location.replace('/explore/restaurant');
       } else {
         const error = await response.json();
         console.error('Failed to create restaurant:', error);
       }
     } catch (error) {
       console.error('Failed to create restaurant:', error);
-      window.location.href='http://localhost:3001/explore/restaurant';
+      window.location.replace('/explore/restaurant');
 
     }
   };

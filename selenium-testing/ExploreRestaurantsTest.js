@@ -21,13 +21,13 @@ async function runTest() {
         await driver.wait(until.elementLocated(By.xpath('//*[@id="root"]/div/div[2]/div[1]/div[1]/div/div[3]/a[1]')), 5000).click();
 
 
-        await driver.wait(until.elementLocated(By.xpath('/html/body/div/div/div[2]/div[2]/div[1]/div/div[2]/div[2]/a')), 5000).click();
+        await driver.wait(until.elementLocated(By.xpath('/html/body/div/div/div[2]/div[1]/div/div/div/button[2]')), 5000).click();
 
 
-        let element = await driver.wait(until.elementLocated(By.css('#root > div > div.recipedetails > div.rd-ingredients > div')), 10000);
+        let element = await driver.wait(until.elementLocated(By.xpath('/html/body/div/div/div[2]/div[2]/div[2]/div/div[2]/div[3]/div/div[3]/div[1]')), 10000);
         let text = await element.getText();
 
-        if (text === 'INGREDIENTS') {
+        if (text === 'Buregdžinica Sac') {
             console.log('Text matches.Test passed!');
         } else {
             console.log(`Text is "${text}". Test failed.`);
