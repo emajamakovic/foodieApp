@@ -51,7 +51,7 @@ export default function RecipeDetails() {
     }, [ userEmail]);
 
         const fetchUser = async () => {
-            const response = await fetch(`http://localhost:3000/user/byemail/${userEmail}`)
+            const response = await fetch(`https://foodie-app-uz37.onrender.com/user/byemail/${userEmail}`)
             const data = await response.json()
 
             if (response.ok) {
