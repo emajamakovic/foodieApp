@@ -23,7 +23,7 @@ export default function Navbar() {
             <div className='nav-container1'>
             <div className='username'>{user.name}</div>
             <button className='logout' onClick={handleClick}>Logout</button>
-            <Link to={'/profile'}><CgProfile className='profileicon'/></Link>
+            <Link id='profile-page-link' to={'/profile'}><CgProfile className='profileicon'/></Link>
             </div>) :
             (<div className='nav-container1'>
               <Link to={'/login'}><div>Login</div></Link>
