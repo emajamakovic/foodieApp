@@ -98,6 +98,7 @@ export default function RecipeDetails() {
 
                 {recipe.directions && (
                     <div className="rd-directions">
+                    <div className="rdi-name">DIRECTIONS</div>
                     <ul>
                     {directions.split(/\d+\./).filter(Boolean).map((direction, index) => (
                         <li key={index}>{`${index + 1}. ${direction.trim()}`}</li>
