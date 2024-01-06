@@ -124,6 +124,7 @@
 
 .r-image input{
     font-family: 'Montserrat', sans-serif;
+    border: none;
 }
 
 #ingredients-input{
