@@ -15,7 +15,7 @@ async function runTest() {
         const password = await driver.findElement(By.xpath('/html/body/div/div/div[2]/form/div/div[2]/input'));
         await password.sendKeys('ema123');
 
-        await driver.findElement(By.className('b-login')).click();
+        await driver.findElement(By.xpath('/html/body/div/div/div[2]/form/div/button')).click();
 
         
        

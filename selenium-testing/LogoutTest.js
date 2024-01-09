@@ -15,7 +15,7 @@ async function runTest() {
         const password = await driver.findElement(By.xpath('/html/body/div/div/div[2]/form/div/div[2]/input'));
         await password.sendKeys('ema123');
 
-        await driver.findElement(By.className('b-login')).click();
+        await driver.findElement(By.xpath('/html/body/div/div/div[2]/form/div/button')).click();
 
         
        
@@ -26,7 +26,7 @@ async function runTest() {
         let text = await name.getText();
 
         if (text === 'Best food for your taste') {
-            console.log('Text matches.Test passed!');
+            console.log('Test passed! User on the home page.');
         } else {
             console.log(`Text is "${text}". Test failed.`);
         }
