@@ -31,6 +31,9 @@ const recipeSchema = new Schema({
     type: Number,
     required: true
   }, 
+  likedBy: {
+    type: String,
+  },
   image: {
     data: Buffer,
     contentType: String,

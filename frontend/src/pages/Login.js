@@ -18,7 +18,6 @@ export default function Login() {
 
   return (
     <div className="loginform">
-
     <form className="login" onSubmit={handleSubmit}>
       <h3 className="l-header">LOGIN</h3>
 
@@ -41,7 +40,6 @@ export default function Login() {
       <div className="b-signup-link">Don't have an account? <a href="/signup">Signup</a></div>
       {error && <div className="error">{error}</div>}
       </div>
-
     </form>
     </div>
   )
