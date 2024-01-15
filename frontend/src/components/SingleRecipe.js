@@ -10,13 +10,12 @@ import { useNavigate } from "react-router-dom";
 export default function SingleRecipe(props) {
     const [isLiked, setIsLiked] = React.useState(false);
     const [likeCount, setLikeCount] = React.useState(props.likes);
-    const [likedByString, setLikedByString]= React.useState(props.likedBy);
-  const navigate = useNavigate();
-  var userData = localStorage.getItem('user');
-  var user = JSON.parse(userData);
+    const navigate = useNavigate();
+    var userData = localStorage.getItem('user');
+    var user = JSON.parse(userData);
 
-  React.useEffect(() => {
-    // Simulating an asynchronous update to the server
+    React.useEffect(() => {
+    
     const updateLikesOnServer = async () => {
       try {
         // Assuming you have an API endpoint to update likes
@@ -25,7 +24,7 @@ export default function SingleRecipe(props) {
           headers: {
             'Content-Type': 'application/json',
           },
-          body: JSON.stringify({ likes: likeCount, likedBy: likedByString }),
+          body: JSON.stringify({ likes: likeCount}),
         });
 
         if (response.ok) {
@@ -35,28 +34,12 @@ export default function SingleRecipe(props) {
           // Revert to the previous state if the update fails
           setLikeCount((prevLikes) => (isLiked ? prevLikes - 1 : prevLikes + 1));
           setIsLiked((prevIsLiked) => !prevIsLiked);
-          setLikedByString((prevLikedByString) => {
-            // If unliking, remove the user from likedByString
-            if (!isLiked) {
-              const updatedLikedBy = prevLikedByString.filter((userName) => userName !== user.name);
-              return updatedLikedBy;
-            }
-            return prevLikedByString;
-          });
         }
       } catch (error) {
         console.error('Error updating likes on the server', error);
         // Revert to the previous state if there's an error
         setLikeCount((prevLikes) => (isLiked ? prevLikes - 1 : prevLikes + 1));
         setIsLiked((prevIsLiked) => !prevIsLiked);
-        setLikedByString((prevLikedByString) => {
-          // If unliking, remove the user from likedByString
-          if (!isLiked) {
-            const updatedLikedBy = prevLikedByString.filter((userName) => userName !== user.name);
-            return updatedLikedBy;
-          }
-          return prevLikedByString;
-        });
       }
     };
     updateLikesOnServer();
@@ -68,15 +51,6 @@ export default function SingleRecipe(props) {
     }
     setLikeCount((prevLikes) => (isLiked ? prevLikes - 1 : prevLikes + 1));
     setIsLiked((prevIsLiked) => !prevIsLiked);
-    setLikedByString((prevLikedByString) => {
-      // If liking, add the user to likedByString
-      if (!isLiked) {
-        return [...prevLikedByString, user.name];
-      }
-      // If unliking, remove the user from likedByString
-      const updatedLikedBy = prevLikedByString.filter((userName) => userName !== user.name);
-      return updatedLikedBy;
-    });
   };
     
     return (
