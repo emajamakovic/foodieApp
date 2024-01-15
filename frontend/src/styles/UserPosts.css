@@ -4,7 +4,7 @@
     margin: 2rem 5rem 0rem 5rem;
     grid-column-gap: 3rem;
     grid-row-gap: 5rem;
-    height: 21rem;
+    height: auto;
 }
 
 .up-recipe, 
@@ -19,6 +19,8 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     margin: 2rem 5rem 6rem 5rem;
     grid-column-gap: 3rem;
+    grid-row-gap: 5rem;
+    height: auto;
 }
 
 .singlerestaurant{

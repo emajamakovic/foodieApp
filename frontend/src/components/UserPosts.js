@@ -19,7 +19,7 @@ export default function UserPosts() {
             const data = await response.json()
 
             if (response.ok) {
-                setAllRecipes(data.slice(0,4))
+                setAllRecipes(data)
             }
         }
 
@@ -28,8 +28,7 @@ export default function UserPosts() {
             const data = await response.json()
 
             if (response.ok) {
-                setAllRestaurants(data.slice(0,4))
-                console.log(allRestaurants)
+                setAllRestaurants(data)
 
             }
         }
