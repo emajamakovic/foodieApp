@@ -10,7 +10,7 @@ import { useNavigate } from "react-router-dom";
 export default function SingleRecipe(props) {
     const [isLiked, setIsLiked] = React.useState(false);
     const [likeCount, setLikeCount] = React.useState(props.likes);
-    const [likedByString, setLikedyByString]= React.useState(props.likedBy);
+    const [likedByString, setLikedByString]= React.useState(props.likedBy);
   const navigate = useNavigate();
   var userData = localStorage.getItem('user');
   var user = JSON.parse(userData);
