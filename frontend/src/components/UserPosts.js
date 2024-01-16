@@ -63,9 +63,11 @@ export default function UserPosts() {
         return (
         <div className="userposts">
             <div className="up-recipe">Recipes</div>
-            <div className="userrecipe">{userRecipes}</div>
+            {allRecipes== null || allRecipes == '' ? <div className="nouserrecipe">No recipe posts</div> : <div className="userrecipe">{userRecipes}</div>}
+
             <div className="up-restaurants">Restaurants</div>
-            <div className="userrestaurants">{userRestaurants}</div>
+            {allRestaurants== null || allRestaurants == '' ? <div className="nouserrestaurants">No restaurant posts</div> : <div className="userrestaurants">{userRestaurants}</div>}
+
         </div>
     )
 }

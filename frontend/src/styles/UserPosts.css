@@ -7,6 +7,17 @@
     height: auto;
 }
 
+.nouserrecipe{
+    display: flex;
+    justify-content: center;
+    color: orange;
+    height: 9rem;
+    align-items: center;
+    background: #F8F8F8;
+    margin: 2rem 5rem;
+    font-size: 1.1rem;
+}
+
 .up-recipe, 
 .up-restaurants {
     margin-top: 4rem;
@@ -21,6 +32,17 @@
     grid-column-gap: 3rem;
     grid-row-gap: 5rem;
     height: auto;
+}
+
+.nouserrestaurants{
+    display: flex;
+    justify-content: center;
+    color: orange;
+    height: 9rem;
+    align-items: center;
+    background: #F8F8F8;
+    margin: 2rem 5rem;
+    font-size: 1.1rem;
 }
 
 .singlerestaurant{
