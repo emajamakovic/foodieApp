@@ -8,8 +8,20 @@ export default function SingleRestaurant(props) {
 
     const [isHovered, setIsHovered] = React.useState(false);
     const [isLiked, setIsLiked] = React.useState(false);
+    const [likedByString, setLikedByString] = React.useState(props.likedBy || []);
     const [likeCount, setLikeCount] = React.useState(props.likes);
+
+    var userData = localStorage.getItem('user');
+    var user = JSON.parse(userData);
   
+
+    React.useEffect(() => {
+      // Check if the current user's name is in the list of likedBy
+      const userLikedThisRecipe = props.likedBy && props.likedBy.includes(user?.email);
+      setIsLiked(userLikedThisRecipe);
+    }, []);
+
+
     React.useEffect(() => {
         // Simulating an asynchronous update to the server
         const updateLikesOnServer = async () => {
@@ -20,7 +32,7 @@ export default function SingleRestaurant(props) {
               headers: {
                 'Content-Type': 'application/json',
               },
-              body: JSON.stringify({ likes: likeCount }),
+              body: JSON.stringify({ likes: likeCount, likedBy: likedByString }),
             });
     
             if (response.ok) {
@@ -30,12 +42,30 @@ export default function SingleRestaurant(props) {
               // Revert to the previous state if the update fails
               setLikeCount((prevLikes) => (isLiked ? prevLikes - 1 : prevLikes + 1));
               setIsLiked((prevIsLiked) => !prevIsLiked);
+              setLikedByString((prevLikedByString) => {
+                // If liking, add the user to likedByString
+                if (!isLiked) {
+                  return [...(prevLikedByString || []), user.email];
+                }
+                // If unliking, remove the user from likedByString
+                const updatedLikedBy = (prevLikedByString || []).filter((userName) => userName !== user.email);
+                return updatedLikedBy;
+              });
             }
           } catch (error) {
             console.error('Error updating likes on the server', error);
             // Revert to the previous state if there's an error
             setLikeCount((prevLikes) => (isLiked ? prevLikes - 1 : prevLikes + 1));
             setIsLiked((prevIsLiked) => !prevIsLiked);
+            setLikedByString((prevLikedByString) => {
+              // If liking, add the user to likedByString
+              if (!isLiked) {
+                return [...(prevLikedByString || []), user.email];
+              }
+              // If unliking, remove the user from likedByString
+              const updatedLikedBy = (prevLikedByString || []).filter((userName) => userName !== user.email);
+              return updatedLikedBy;
+            });
           }
         };
         updateLikesOnServer();
@@ -48,6 +78,15 @@ export default function SingleRestaurant(props) {
     const handleLikeToggle = () => {
         setLikeCount((prevLikes) => (isLiked ? prevLikes - 1 : prevLikes + 1));
         setIsLiked((prevIsLiked) => !prevIsLiked);
+        setLikedByString((prevLikedByString) => {
+          // If liking, add the user to likedByString
+          if (!isLiked) {
+            return [...(prevLikedByString || []), user.email];
+          }
+          // If unliking, remove the user from likedByString
+          const updatedLikedBy = (prevLikedByString || []).filter((userName) => userName !== user.email);
+          return updatedLikedBy;
+        });
       };
     
     return (

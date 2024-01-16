@@ -39,6 +39,9 @@ const restaurantSchema = new Schema({
     type: Number,
     required: true
   },
+  likedBy: {
+    type: Array
+  },
   image: {
     data: Buffer,
     contentType: String,

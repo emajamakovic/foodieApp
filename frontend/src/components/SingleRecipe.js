@@ -15,7 +15,6 @@ export default function SingleRecipe(props) {
     const navigate = useNavigate();
     var userData = localStorage.getItem('user');
     var user = JSON.parse(userData);
-    console.log(user)
 
     React.useEffect(() => {
       // Check if the current user's name is in the list of likedBy
